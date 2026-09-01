@@ -41,7 +41,7 @@
             bindings = <
   &kp Q       &kp W       &kp F        &kp P        &kp B      &studio_unlock  &to 3     &kp Y      &kp U        &kp I        &kp O       &kp P
   &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &bt BT_CLR_ALL  &kp RALT  &kp H      &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SQT
-  &kp Y       &kp X       &kp C        &kp D        &kp V                                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
+  &kp Y       &kp X       &kp C        &kp D        &kp V                                &kp N      &kp M        &kp COMMA    &kp DOT     &kp LEFT_GUI
                           &lt 2 ESC    &lt 1 SPACE  &lt 0 TAB                            &lt 0 RET  &lt 0 BSPC   &lt 0 DEL
             >;
 
