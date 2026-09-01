@@ -39,10 +39,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q       &kp W       &kp F        &kp P        &kp B      &studio_unlock  &to 3     &kp J      &kp L        &kp U        &kp Y       &none
-  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &none           &kp RALT  &kp M      &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
-  &kp Y       &kp X       &kp C        &kp D        &kp V                                &kp K      &kp H        &kp COMMA    &kp DOT     &none
-                          &lt 2 ESC    &lt 1 SPACE  &lt 0 TAB                            &lt 0 RET  &lt 0 BSPC   &lt 0 DEL
+  &kp Q       &kp W       &kp F        &kp P        &kp B        &studio_unlock  &to 3     &kp J        &kp L        &kp U        &kp Z       &none
+  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G        &none           &kp RALT  &kp M        &mt RSHFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O
+  &kp Y       &kp X       &kp C        &kp D        &kp V                                  &kp K        &kp H        &kp COMMA    &kp DOT     &none
+                          &lt 2 ESC    &lt 1 SPACE  &lt 1 ENTER                            &lt 2 SPACE  &lt 0 BSPC   &lt 0 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
