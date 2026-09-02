@@ -75,20 +75,20 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp RA(N0)        &none  &none  &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none
-  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp LS(NUMBER_9)  &none  &none  &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE
-  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none            &kp RA(NUMBER_9)                &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0
-                                    &none            &none            &none                           &none            &none            &none
+  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp RA(N0)        &none  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp LS(NUMBER_9)  &none  &none  &kp KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_DIVIDE
+  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none            &kp RA(NUMBER_9)                &kp KP_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_NUMBER_0
+                                    &none            &none            &none                           &none            &none         &none
             >;
         };
 
         mouse {
             display-name = "mouse";
             bindings = <
-  &studio_unlock   &none      &none      &none      &none  &none  &none  &none  &none              &none           &none         &to 0
-  &rgb_ug RGB_TOG  &mkp MCLK  &mkp RCLK  &mkp LCLK  &none  &none  &none  &none  &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-  &bt BT_CLR_ALL   &none      &none      &none      &none                &none  &mmv MOVE_X(-1000)  &none           &none         &none
-                              &none      &none      &none                &none  &none              &none
+  &studio_unlock   &none      &none      &none      &none  &none  &none  &mmv MOVE_X(0)  &none              &none             &none              &to 0
+  &rgb_ug RGB_TOG  &mkp MCLK  &mkp RCLK  &mkp LCLK  &none  &none  &none  &none           &mmv MOVE_X(-600)  &mmv MOVE_Y(600)  &mmv MOVE_Y(-600)  &mmv MOVE_X(600)
+  &bt BT_CLR_ALL   &none      &none      &none      &none                &none           &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT
+                              &none      &none      &none                &none           &none              &none
             >;
         };
     };
