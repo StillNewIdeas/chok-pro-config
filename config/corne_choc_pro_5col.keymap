@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/pointing.h>
-
 
 #define BASE 0
 #define NAV 1
@@ -31,8 +29,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "QWERTY";
+        base {
+            display-name = "base";
 
             // --------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  | MUTE | PLAY |  Y  |  U  |  I  |  O  |  P  |
@@ -41,17 +39,17 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q       &kp W       &kp F        &kp P        &kp B      &studio_unlock  &to 3     &kp Y      &kp U        &kp I        &kp O       &kp P
-  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &bt BT_CLR_ALL  &kp RALT  &kp H      &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SQT
-  &kp Y       &kp X       &kp C        &kp D        &kp V                                &kp N      &kp M        &kp COMMA    &kp DOT     &kp LEFT_GUI
-                          &lt 2 ESC    &lt 1 SPACE  &lt 0 TAB                            &lt 0 RET  &lt 0 BSPC   &lt 0 DEL
+  &kp Q               &kp W  &kp F       &kp P           &kp B        &studio_unlock  &none     &kp J        &kp L            &kp U      &kp Z    &to 3
+  &kp A               &kp R  &kp S       &kp T           &kp G        &kp LALT        &kp RALT  &kp M        &kp N            &kp E      &kp I    &kp O
+  &mt LEFT_CONTROL Y  &kp X  &kp C       &kp D           &kp V                                  &kp K        &kp H            &kp COMMA  &kp DOT  &mt LEFT_CONTROL A
+                             &kp ESCAPE  &kp LEFT_SHIFT  &lt 2 ENTER                            &lt 1 SPACE  &kp RIGHT_SHIFT  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        nav_layer {
-            display-name = "NAV";
+        symbols {
+            display-name = "symbols";
 
             // --------------------------------------------------------------------------------
             // |     |     |      |       |     |      |      |      |      |      |      |      |
@@ -60,15 +58,15 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &none     &none     &none      &none      &none   &trans    &trans    &none     &none     &none      &none      &none
-  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none   &kp LALT  &kp RALT  &kp CAPS  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-  &none     &none     &none      &none      &none                       &kp INS   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-                      &trans     &trans     &trans                      &trans    &trans    &trans
+  &kp A             &none         &none              &none                    &kp LEFT_BRACE        &none     &none     &none     &none     &none      &none      &none
+  &kp LGUI          &kp LALT      &kp LCTRL          &kp LSHFT                &kp LEFT_PARENTHESIS  &kp LALT  &kp RALT  &kp CAPS  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT       &none                    &kp LEFT_BRACKET                          &kp INS   &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+                                  &mt DELETE DELETE  &mt BACKSPACE BACKSPACE  &none                                     &none     &none     &none
             >;
         };
 
-        media_layer {
-            display-name = "MEDIA";
+        num {
+            display-name = "num";
 
             // --------------------------------------------------------------------------------------
             // | HUD | HUI | SAD | SAI | EFF | MUTE | PLAY | EFF | SAI | SAD | HUI | HUD |
@@ -77,30 +75,20 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &kp C_MUTE  &kp C_PP  &rgb_ug RGB_EFF  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD
-  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp C_NEXT       &kp LALT    &kp RALT  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp C_NEXT
-  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none            &none                                  &none            &none            &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI
-                                    &trans           &trans           &trans                                 &trans           &trans           &trans
+  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp RIGHT_BRACE        &kp C_MUTE  &kp C_PP  &rgb_ug RGB_EFF  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD
+  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp RIGHT_PARENTHESIS  &kp LALT    &kp RALT  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp C_NEXT
+  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none            &kp RIGHT_BRACKET                            &none            &none            &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI
+                                    &none            &none            &none                                        &none            &none            &none
             >;
         };
 
-        extra_layer_1 {
-            display-name = "EXTRA 1";
+        mouse {
+            display-name = "mouse";
             bindings = <
-  &trans  &trans     &trans     &trans     &trans  &trans  &to 0   &trans  &trans             &msc MOVE_Y(20)   &msc MOVE_Y(-20)   &trans
-  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &none   &mmv MOVE_LEFT     &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT
-  &trans  &trans     &trans     &trans     &trans                  &trans  &mmv MOVE_X(-1000)  &mmv MOVE_Y(1000)  &mmv MOVE_Y(-1000)  &mmv MOVE_X(1000)
-                     &trans     &trans     &trans                  &trans  &trans             &trans
-            >;
-        };
-
-        extra_layer_2 {
-            display-name = "EXTRA 2";
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
+  &studio_unlock   &none      &none      &none      &none  &none  &none  &none  &none           &none           &none         &to 0
+  &rgb_ug RGB_TOG  &mkp MCLK  &mkp RCLK  &mkp LCLK  &none  &none  &none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+  &bt BT_CLR_ALL   &none      &none      &none      &none                &none  &none           &none           &none         &none
+                              &none      &none      &none                &none  &none           &none
             >;
         };
     };
