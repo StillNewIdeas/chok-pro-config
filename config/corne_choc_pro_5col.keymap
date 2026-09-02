@@ -39,17 +39,17 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q               &kp W  &kp F          &kp P           &kp B        &studio_unlock  &kp MINUS  &kp J        &kp L         &kp U       &kp Z    &to 3
-  &kp A               &kp R  &kp S          &kp T           &kp G        &kp LALT        &kp RALT   &kp M        &kp N         &kp E       &kp I    &kp O
-  &mt LEFT_CONTROL Y  &kp X  &kp C          &kp D           &kp V                                   &kp K        &kp H         &kp COMMA   &kp DOT  &mt LEFT_CONTROL A
-                             &kp BACKSPACE  &kp LEFT_SHIFT  &lt 2 ENTER                             &lt 1 SPACE  &kp LEFT_GUI  &kp ESCAPE
+  &kp Q               &kp W  &kp F          &kp P           &kp B        &studio_unlock  &kp MINUS  &kp J        &kp L       &kp U         &kp Z    &to 3
+  &kp A               &kp R  &kp S          &kp T           &kp G        &kp LALT        &kp RALT   &kp M        &kp N       &kp E         &kp I    &kp O
+  &mt LEFT_CONTROL Y  &kp X  &kp C          &kp D           &kp V                                   &kp K        &kp H       &kp COMMA     &kp DOT  &mt LEFT_CONTROL A
+                             &kp BACKSPACE  &kp LEFT_SHIFT  &lt 2 ENTER                             &lt 1 SPACE  &kp ESCAPE  &kp LEFT_WIN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-        symbols {
-            display-name = "symbols";
+        symbolsAndNav {
+            display-name = "symbolsAndNav";
 
             // --------------------------------------------------------------------------------
             // |     |     |      |       |     |      |      |      |      |      |      |      |
@@ -58,10 +58,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &kp A             &none         &none  &none           &kp RA(N7)    &none  &none  &none    &none     &none     &none           &none
-  &kp A             &kp A         &kp A  &kp A           &kp LS(N8)    &none  &none  &kp TAB  &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT
-  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp A  &none           &kp RA(N8)                  &kp A    &kp A     &kp APOS  &kp LEFT_BRACE  &kp SEMICOLON
-                                  &none  &kp LEFT_SHIFT  &kp LEFT_GUI                &none    &none     &none
+  &none             &kp NON_US_BSLH   &kp LS(NON_US_BSLH)  &kp NON_US_HASH  &kp RA(N7)    &none  &none  &kp LS(NUMBER_5)  &kp C_VOLUME_UP    &kp PAGE_DOWN  &kp PAGE_UP     &none
+  &kp LS(NUMBER_6)  &kp LS(NUMBER_2)  &kp LS(NUMBER_1)     &kp LS(SLASH)    &kp LS(N8)    &none  &none  &kp TAB           &kp LEFT           &kp DOWN       &kp UP          &kp RIGHT
+  &kp LEFT_CONTROL  &kp LEFT_ALT      &kp RA(NON_US_BSLH)  &kp LS(N0)       &kp RA(N8)                  &kp RA(Q)         &kp C_VOLUME_DOWN  &kp APOS       &kp LEFT_BRACE  &kp SEMICOLON
+                                      &none                &kp LEFT_SHIFT   &kp LEFT_GUI                &none             &none              &none
             >;
         };
 
@@ -75,10 +75,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &kp A  &kp A  &kp A  &kp A  &kp A  &kp A  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-  &kp A  &kp A  &kp A  &kp A  &kp A  &kp A  &none  &kp KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_DIVIDE
-  &kp A  &kp A  &kp A  &kp A  &kp A                &kp KP_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_NUMBER_0
-                &none  &none  &none                &none            &none         &none
+  &none      &none          &none  &none  &none  &none  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &kp EQUAL  &kp LS(EQUAL)  &kp A  &kp A  &kp A  &none  &none  &kp KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_DIVIDE
+  &none      &none          &none  &kp A  &kp A                &kp KP_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                            &none  &none  &none                &none            &none         &none
             >;
         };
 
