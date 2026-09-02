@@ -58,10 +58,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &kp A             &none         &none         &none      &kp LEFT_BRACE        &none     &none     &none    &none     &none      &none      &none
-  &kp LGUI          &kp LALT      &kp LCTRL     &kp LSHFT  &kp LEFT_PARENTHESIS  &kp LALT  &kp RALT  &kp TAB  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
-  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none      &kp LEFT_BRACKET                          &kp INS  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
-                                  &none         &none      &none                                     &none    &none     &none
+  &kp A             &none         &none         &none      &kp RA(N7)  &none     &none     &none    &none     &none      &none      &none
+  &kp LGUI          &kp LALT      &kp LCTRL     &kp LSHFT  &kp LS(N8)  &kp LALT  &kp RALT  &kp TAB  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &none      &kp RA(N8)                      &kp INS  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+                                  &none         &none      &none                           &none    &none     &none
             >;
         };
 
@@ -75,10 +75,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp RIGHT_BRACE        &kp C_MUTE  &kp C_PP  &rgb_ug RGB_EFF  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD
-  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp RIGHT_PARENTHESIS  &kp LALT    &kp RALT  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp C_NEXT
-  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none            &kp RIGHT_BRACKET                            &none            &none            &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI
-                                    &none            &none            &none                                        &none            &none            &none
+  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &kp RA(N0)        &none  &none  &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none
+  &kp C_PREV       &kp C_VOL_DN     &kp C_MUTE       &kp C_VOL_UP     &kp LS(NUMBER_9)  &none  &none  &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE
+  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &none            &kp RA(NUMBER_9)                &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0
+                                    &none            &none            &none                           &none            &none            &none
             >;
         };
 
