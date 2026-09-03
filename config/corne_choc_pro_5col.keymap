@@ -85,7 +85,7 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &none      &kp GRAVE      &tilde              &none                &kp RA(N0)  &none  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &none      &kp GRAVE      &kp DE_TILDE        &none                &kp RA(N0)  &none  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
   &kp EQUAL  &kp LS(EQUAL)  &kp LS(UNDERSCORE)  &kp LS(NON_US_HASH)  &kp LS(N9)  &none  &none  &kp KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_DIVIDE
   &none      &none          &none               &kp LS(PERIOD)       &kp RA(N9)                &kp KP_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
                             &none               &none                &none                     &none            &none         &none
