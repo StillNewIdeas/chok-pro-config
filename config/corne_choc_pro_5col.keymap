@@ -27,6 +27,15 @@
 / {
     chosen { zmk,physical-layout = &five_col_layout; };
 
+    macros {
+        tilde: tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>;
+            label = "TILDE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -76,10 +85,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &none      &none          &none         &none             &kp DE_RIGHT_BRACE        &none  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-  &kp EQUAL  &kp LS(EQUAL)  &kp DE_TILDE  &kp DE_BACKSLASH  &kp DE_RIGHT_PARENTHESIS  &none  &none  &kp KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_DIVIDE
-  &none      &none          &none         &kp DE_CARET      &kp DE_RIGHT_BRACKET                    &kp KP_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                            &none         &none             &none                                   &none            &none         &none
+  &none      &kp GRAVE      &tilde              &none                &kp RA(N0)  &none  &none  &kp KP_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &kp EQUAL  &kp LS(EQUAL)  &kp LS(UNDERSCORE)  &kp LS(NON_US_HASH)  &kp LS(N9)  &none  &none  &kp KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_DIVIDE
+  &none      &none          &none               &kp LS(PERIOD)       &kp RA(N9)                &kp KP_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                            &none               &none                &none                     &none            &none         &none
             >;
         };
 
@@ -88,10 +97,9 @@
             bindings = <
   &studio_unlock   &none      &none      &none      &none  &none  &none  &none  &none               &none              &none               &to 0
   &rgb_ug RGB_TOG  &mkp MCLK  &mkp RCLK  &mkp LCLK  &none  &none  &none  &none  &mmv MOVE_LEFT      &mmv MOVE_DOWN     &mmv MOVE_UP        &mmv MOVE_RIGHT
-	&bt BT_CLR_ALL   &none      &none      &none      &none                &none  &mmv MOVE_X(-1500)  &mmv MOVE_Y(1500)  &mmv MOVE_Y(-1500)  &mmv MOVE_X(1500)
+  &bt BT_CLR_ALL   &none      &none      &none      &none                &none  &mmv MOVE_X(-1500)  &mmv MOVE_Y(1500)  &mmv MOVE_Y(-1500)  &mmv MOVE_X(1500)
                               &none      &none      &none                &none  &none               &none
             >;
         };
     };
 };
-
