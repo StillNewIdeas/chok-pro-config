@@ -49,7 +49,7 @@
 
             bindings = <
   &kp Q               &kp W           &kp F             &kp P               &kp B      &studio_unlock  &rgb_ug RGB_TOG  &kp J      &kp L               &kp U             &kp Z           &none
-  &mt LG(LEFT_GUI) A  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LEFT_CONTROL T  &kp G      &bt BT_CLR_ALL  &none            &kp M      &mt LEFT_CONTROL N  &mt LEFT_SHIFT E  &mt LEFT_ALT I  &mt LEFT_GUI O
+  &mt LEFT_ALT A      &mt LEFT_GUI R  &mt LEFT_SHIFT S  &mt LEFT_CONTROL T  &kp G      &bt BT_CLR_ALL  &none            &kp M      &mt LEFT_CONTROL N  &mt LEFT_SHIFT E  &mt LEFT_GUI I  &mt LEFT_ALT O
   &mt LEFT_CONTROL Y  &kp X           &kp C             &kp D               &kp V                                       &kp K      &kp H               &kp DE_COMMA      &kp DE_DOT      &mt LEFT_CONTROL DE_ESZETT
                                       &kp BACKSPACE     &kp LEFT_SHIFT      &kp ENTER                                   &kp SPACE  &mo 1               &kp ESCAPE
             >;
