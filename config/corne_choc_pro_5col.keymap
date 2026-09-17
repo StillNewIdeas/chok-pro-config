@@ -34,14 +34,14 @@
             label = "walrus";
         };
 
-        backtick: backtick {
+        forwardtick: backtick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp EQUAL>;
             label = "BACKTICK";
         };
 
-        forwardtick: forwardtick {
+        backtick: forwardtick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(EQUAL) &kp LS(EQUAL)>;
@@ -62,10 +62,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q                &kp W           &kp F           &kp P               &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J      &kp L               &kp U           &kp Z           &none
-  &kp A                &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G      &kp C_VOLUME_DOWN  &none            &kp M      &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LEFT_ALT I  &kp O
-  &mt LEFT_SHIFT DE_Z  &kp X           &kp C           &kp D               &kp V                                          &kp K      &kp H               &kp DE_COMMA    &kp DE_DOT      &mt LEFT_SHIFT DE_ESZETT
-                                       &kp BACKSPACE   &mo 2               &kp ENTER                                      &kp SPACE  &mo 1               &kp ESCAPE
+  &kp Q     &kp W           &kp F           &kp P               &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J      &kp L               &kp U           &kp Z           &none
+  &kp A     &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G      &kp C_VOLUME_DOWN  &none            &kp M      &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LEFT_ALT I  &kp O
+  &kp DE_Z  &kp X           &kp C           &mt LSHIFT D        &kp V                                          &kp K      &mt LEFT_SHIFT H    &kp DE_COMMA    &kp DE_DOT      &kp DE_ESZETT
+                            &kp BACKSPACE   &mo 2               &kp ENTER                                      &kp SPACE  &mo 1               &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
