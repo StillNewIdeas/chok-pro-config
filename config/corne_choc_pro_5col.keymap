@@ -81,9 +81,9 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &none             &kp DE_PERCENT  &kp DE_AMPERSAND      &kp DE_SINGLE_QUOTE  &mt DE_RIGHT_BRACE DE_LEFT_BRACE              &kp PAGE_UP    &studio_unlock  &none    &kp DE_LESS_THAN  &walrus          &kp DE_GREATER_THAN  &none
+  &kp DE_EURO       &kp DE_PERCENT  &kp DE_AMPERSAND      &kp DE_SINGLE_QUOTE  &mt DE_RIGHT_BRACE DE_LEFT_BRACE              &kp PAGE_UP    &studio_unlock  &none    &kp DE_LESS_THAN  &walrus          &kp DE_GREATER_THAN  &none
   &kp DE_HASH       &kp DE_DOLLAR   &kp DE_DOUBLE_QUOTES  &kp DE_UNDERSCORE    &mt DE_RIGHT_PARENTHESIS DE_LEFT_PARENTHESIS  &kp PAGE_DOWN  &bt BT_CLR_ALL  &kp TAB  &kp LEFT          &kp DOWN         &kp UP               &kp RIGHT
-  &kp LEFT_CONTROL  &kp DE_EURO     &kp DE_PIPE           &kp DE_EQUAL         &mt DE_RIGHT_BRACKET DE_LEFT_BRACKET                                         &none    &kp DE_AT         &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
+  &kp LEFT_CONTROL  &kp DE_EXCL     &kp DE_PIPE           &kp DE_EQUAL         &mt DE_RIGHT_BRACKET DE_LEFT_BRACKET                                         &none    &kp DE_AT         &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
                                     &kp LEFT_SHIFT        &kp LALT             &kp LEFT_GUI                                                                 &none    &none             &none
             >;
         };
