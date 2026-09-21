@@ -81,10 +81,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &none             &kp DE_PERCENT    &kp DE_EXCL           &kp DE_HASH        &kp DE_LEFT_BRACE        &kp PAGE_UP    &studio_unlock  &none        &kp DE_LESS_THAN     &walrus          &kp DE_GREATER_THAN  &none
-  &kp DE_AT         &kp DE_DOLLAR     &kp DE_DOUBLE_QUOTES  &kp DE_UNDERSCORE  &kp DE_LEFT_PARENTHESIS  &kp PAGE_DOWN  &bt BT_CLR_ALL  &kp TAB      &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
-  &kp LEFT_CONTROL  &kp DE_AMPERSAND  &kp DE_PIPE           &kp DE_EQUAL       &kp DE_LEFT_BRACKET                                     &kp DE_EURO  &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
-                                      &kp LEFT_SHIFT        &kp LALT           &kp LEFT_GUI                                            &none        &none                &none
+  &none             &kp DE_PERCENT    &walrus               &kp DE_HASH        &kp DE_LEFT_BRACE        &kp PAGE_UP    &studio_unlock  &kp DE_TILDE  &kp DE_DOLLAR        &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &none
+  &kp DE_AT         &kp DE_EXCL       &kp DE_DOUBLE_QUOTES  &kp DE_UNDERSCORE  &kp DE_LEFT_PARENTHESIS  &kp PAGE_DOWN  &bt BT_CLR_ALL  &kp TAB       &kp LEFT             &kp DOWN          &kp UP               &kp RIGHT
+  &kp LEFT_CONTROL  &kp DE_AMPERSAND  &kp DE_PIPE           &kp DE_EQUAL       &kp DE_LEFT_BRACKET                                     &kp DE_EURO   &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT   &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
+                                      &kp LEFT_SHIFT        &kp LALT           &kp LEFT_GUI                                            &none         &none                &none
             >;
         };
 
