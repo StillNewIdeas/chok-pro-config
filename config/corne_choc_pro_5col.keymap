@@ -62,7 +62,7 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q     &kp W           &kp F           &kp P               &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L               &kp U           &kp Z           &none
+  &kp Q     &kp W           &kp F           &kp P               &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L               &kp U           &kp Z           &kp DELETE
   &kp A     &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LEFT_ALT I  &kp O
   &kp DE_Z  &kp X           &kp C           &kp D               &kp V                                          &kp K        &kp H               &kp DE_COMMA    &kp DE_DOT      &kp DE_ESZETT
                             &kp BACKSPACE   &kp LEFT_SHIFT      &lt 2 RET                                      &lt 1 SPACE  &kp LEFT_SHIFT      &kp ESCAPE
