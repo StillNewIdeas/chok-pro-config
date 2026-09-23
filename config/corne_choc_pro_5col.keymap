@@ -62,10 +62,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q       &kp W           &kp F             &kp P               &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L               &kp U             &kp Z           &kp DELETE
-  &mt LALT A  &mt LEFT_GUI R  &mt LEFT_SHIFT S  &mt LEFT_CONTROL T  &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &mt LEFT_CONTROL N  &mt LEFT_SHIFT E  &mt LEFT_GUI I  &mt LALT O
-  &kp DE_Z    &kp X           &kp C             &kp D               &kp V                                          &kp K        &kp H               &kp DE_COMMA      &kp DE_DOT      &kp DE_ESZETT
-                              &kp BACKSPACE     &kp LEFT_SHIFT      &lt 2 RET                                      &lt 1 SPACE  &kp LEFT_SHIFT      &kp ESCAPE
+  &kp Q       &kp W           &kp F             &kp P               &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L               &kp U             &kp Z            &kp DE_O_UMLAUT
+  &mt LALT A  &mt LEFT_GUI R  &mt LEFT_SHIFT S  &mt LEFT_CONTROL T  &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &mt LEFT_CONTROL N  &mt LEFT_SHIFT E  &mt LEFT_GUI I   &mt LALT O
+  &kp DE_Z    &kp X           &kp C             &kp D               &kp V                                          &kp K        &kp H               &kp DE_U_UMLAUT   &kp DE_A_UMLAUT  &kp DE_ESZETT
+                              &kp BACKSPACE     &kp DE_COMMA        &lt 2 RET                                      &lt 1 SPACE  &kp DE_DOT          &kp ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -83,7 +83,7 @@
             bindings = <
   &none             &kp DE_PERCENT  &walrus               &kp DE_HASH        &kp DE_LEFT_BRACE        &kp PAGE_UP    &studio_unlock  &none    &kp DE_DOLLAR        &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &none
   &kp DE_AT         &kp DE_EXCL     &kp DE_DOUBLE_QUOTES  &kp DE_UNDERSCORE  &kp DE_LEFT_PARENTHESIS  &kp PAGE_DOWN  &bt BT_CLR_ALL  &kp TAB  &kp LEFT             &kp DOWN          &kp UP               &kp RIGHT
-  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                 &kp DE_EQUAL       &kp DE_LEFT_BRACKET                                     &none    &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT   &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
+  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none                 &kp DE_EQUAL       &kp DE_LEFT_BRACKET                                     &none    &kp DE_SINGLE_QUOTE  &none             &none                &none
                                     &kp LALT              &kp LEFT_GUI       &mo 2                                                   &none    &none                &none
             >;
         };
