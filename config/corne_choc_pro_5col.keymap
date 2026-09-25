@@ -81,10 +81,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &none                    &kp DE_PERCENT        &walrus                         &kp DE_DOLLAR             &none  &kp PAGE_UP    &studio_unlock  &none  &kp TAB          &kp DE_LESS_THAN  &kp DE_GREATER_THAN  &none
-  &mt LEFT_ALT DE_AT       &mt LEFT_GUI DE_EXCL  &mt LEFT_SHIFT DE_SINGLE_QUOTE  &mt LEFT_CONTROL DE_HASH  &none  &kp PAGE_DOWN  &bt BT_CLR_ALL  &none  &kp LEFT         &kp DOWN          &kp UP               &kp RIGHT
-  &kp DE_LEFT_PARENTHESIS  &kp DE_LEFT_BRACKET   &kp DE_LEFT_BRACE               &kp DE_EQUAL              &none                                 &none  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT   &kp DE_O_UMLAUT      &none
-                                                 &none                           &none                     &mo 2                                 &none  &none            &none
+  &none                    &kp DE_PERCENT        &walrus                         &kp DE_DOLLAR             &none  &kp PAGE_UP    &studio_unlock  &none  &kp DE_LESS_THAN  &kp TAB          &kp DE_GREATER_THAN  &none
+  &mt LEFT_ALT DE_AT       &mt LEFT_GUI DE_EXCL  &mt LEFT_SHIFT DE_SINGLE_QUOTE  &mt LEFT_CONTROL DE_HASH  &none  &kp PAGE_DOWN  &bt BT_CLR_ALL  &none  &kp LEFT          &kp DOWN         &kp UP               &kp RIGHT
+  &kp DE_LEFT_PARENTHESIS  &kp DE_LEFT_BRACKET   &kp DE_LEFT_BRACE               &kp DE_EQUAL              &none                                 &none  &kp DE_U_UMLAUT   &kp DE_A_UMLAUT  &kp DE_O_UMLAUT      &none
+                                                 &none                           &none                     &mo 2                                 &none  &none             &none
             >;
         };
 
