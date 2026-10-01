@@ -55,10 +55,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q     &mt LEFT_WIN W  &mt LEFT_CONTROL F  &kp P           &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &mt LEFT_CONTROL U  &mt LEFT_GUI DE_Y  &none
-  &kp A     &kp R           &kp S               &kp T           &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E               &kp I              &kp O
-  &kp DE_Z  &kp X           &kp C               &kp D           &kp V                                          &kp K        &kp H                  &kp DE_COMMA        &kp DE_DOT         &kp DE_ESZETT
-                            &kp BACKSPACE       &kp LEFT_SHIFT  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp DELETE
+  &kp Q     &mt LEFT_WIN W  &mt LEFT_CONTROL F  &kp P                  &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &mt LEFT_CONTROL U  &mt LEFT_GUI DE_Y  &none
+  &kp A     &kp R           &kp S               &kp T                  &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E               &kp I              &kp O
+  &kp DE_Z  &kp X           &kp C               &kp D                  &kp V                                          &kp K        &kp H                  &kp DE_COMMA        &kp DE_DOT         &kp DE_ESZETT
+                            &kp BACKSPACE       &mt LEFT_SHIFT ESCAPE  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -74,10 +74,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &none                &kp DE_PERCENT        &kp DE_HASH                    &kp DE_DOLLAR              &none  &kp PAGE_UP    &studio_unlock  &none  &kp DE_LESS_THAN     &kp TAB          &kp DE_GREATER_THAN  &none
-  &kp DE_AT            &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &none  &kp PAGE_DOWN  &bt BT_CLR_ALL  &none  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
-  &kp DE_LEFT_BRACKET  &kp DE_LEFT_BRACE     &kp DE_LEFT_PARENTHESIS        &kp DE_EQUAL               &none                                 &none  &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
-                                             &walrus                        &kp LEFT_SHIFT             &mo 2                                 &none  &none                &none
+  &none             &kp DE_PERCENT        &kp DE_HASH                    &kp DE_DOLLAR              &kp DE_LEFT_BRACE        &kp PAGE_UP    &studio_unlock  &kp DE_RIGHT_BRACE        &kp DE_LESS_THAN     &kp TAB          &kp DE_GREATER_THAN  &none
+  &kp DE_AT         &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &kp DE_LEFT_PARENTHESIS  &kp PAGE_DOWN  &bt BT_CLR_ALL  &kp DE_RIGHT_PARENTHESIS  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
+  &kp DE_AMPERSAND  &kp DE_PIPE           &walrus                        &kp DE_EQUAL               &kp DE_LEFT_BRACKET                                     &kp DE_RIGHT_BRACKET      &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
+                                          &none                          &kp LEFT_SHIFT             &mo 2                                                   &none                     &none                &none
             >;
         };
 
@@ -91,10 +91,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &none                 &kp EQUAL           &kp DE_BACKSLASH          &kp DE_CARET      &none  &none  &kp F12  &kp DE_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-  &kp DE_EURO           &backtick           &kp DE_PIPE               &kp DE_AMPERSAND  &none  &none  &none    &kp DE_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
-  &kp DE_RIGHT_BRACKET  &kp DE_RIGHT_BRACE  &kp DE_RIGHT_PARENTHESIS  &kp DE_TILDE      &none                  &kp DE_PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                                            &none                     &none             &none                  &kp DE_DOT    &kp DE_COMMA  &none
+  &none         &none         &none      &kp DE_EURO       &none  &none  &kp F12  &kp DE_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &kp DE_CARET  &kp DE_TILDE  &kp EQUAL  &backtick         &none  &none  &none    &kp DE_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
+  &none         &none         &none      &kp DE_BACKSLASH  &none                  &kp DE_PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                              &none      &none             &none                  &kp DE_DOT    &kp DE_COMMA  &none
             >;
         };
     };
