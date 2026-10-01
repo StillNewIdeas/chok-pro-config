@@ -56,7 +56,7 @@
 
             bindings = <
   &kp Q     &mt LEFT_WIN W  &mt LEFT_CONTROL F  &kp P           &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &mt LEFT_CONTROL U  &mt LEFT_GUI DE_Y  &none
-  &kp A     &kp R           &kt S               &kp T           &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E               &kp I              &kp O
+  &kp A     &kp R           &kp S               &kp T           &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E               &kp I              &kp O
   &kp DE_Z  &kp X           &kp C               &kp D           &kp V                                          &kp K        &kp H                  &kp DE_COMMA        &kp DE_DOT         &kp DE_ESZETT
                             &kp BACKSPACE       &kp LEFT_SHIFT  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp DELETE
             >;
