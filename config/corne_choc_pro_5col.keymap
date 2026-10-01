@@ -55,10 +55,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q              &kp W               &kp F          &kp P           &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &kp U         &kp DE_Y                 &none
-  &kp A              &kp R               &kt S          &kp T           &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E         &kp I                    &kp O
-  &mt LEFT_WIN DE_Z  &mt LEFT_CONTROL X  &kp C          &kp D           &kp V                                          &kp K        &kp H                  &kp DE_COMMA  &mt LEFT_CONTROL DE_DOT  &mt LEFT_WIN DE_ESZETT
-                                         &kp BACKSPACE  &kp LEFT_SHIFT  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp DELETE
+  &kp Q     &mt LEFT_WIN W  &mt LEFT_CONTROL F  &kp P           &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &mt LEFT_CONTROL U  &mt LEFT_GUI DE_Y  &none
+  &kp A     &kp R           &kt S               &kp T           &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E               &kp I              &kp O
+  &kp DE_Z  &kp X           &kp C               &kp D           &kp V                                          &kp K        &kp H                  &kp DE_COMMA        &kp DE_DOT         &kp DE_ESZETT
+                            &kp BACKSPACE       &kp LEFT_SHIFT  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
