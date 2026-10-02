@@ -55,10 +55,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q     &kp W  &kp F          &kp P                  &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &kp U         &kp DE_Y    &kp DE_ESZETT
-  &kp A     &kp R  &kp S          &kp T                  &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &kp N                  &kp E         &kp I       &kp O
-  &kp DE_Z  &kp X  &kp C          &kp D                  &kp V                                          &kp K        &kp H                  &kp DE_COMMA  &kp DE_DOT  &kp LEFT_CONTROL
-                   &kp BACKSPACE  &mt LEFT_SHIFT ESCAPE  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp LEFT_GUI
+  &kp Q     &kp W  &kp F           &kp P                  &kp B      &kp C_VOLUME_UP    &rgb_ug RGB_TOG  &kp J        &kp L                  &kp U           &kp DE_Y    &none
+  &kp A     &kp R  &mt LEFT_GUI S  &mt LEFT_CONTROL T     &kp G      &kp C_VOLUME_DOWN  &none            &kp M        &mt LEFT_CONTROL N     &mt LEFT_GUI E  &kp I       &kp O
+  &kp DE_Z  &kp X  &kp C           &kp D                  &kp V                                          &kp K        &kp H                  &kp DE_COMMA    &kp DE_DOT  &kp DE_ESZETT
+                   &kp BACKSPACE   &mt LEFT_SHIFT ESCAPE  &lt 2 RET                                      &lt 1 SPACE  &mt LEFT_SHIFT ESCAPE  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -91,10 +91,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &none         &none         &none      &kp DE_EURO       &none  &none  &kp F12  &kp DE_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-  &kp DE_CARET  &kp DE_TILDE  &kp EQUAL  &backtick         &none  &none  &none    &kp DE_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
-  &none         &none         &none      &kp DE_BACKSLASH  &none                  &kp DE_PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                              &none      &none             &none                  &kp DE_DOT    &kp DE_COMMA  &none
+  &none  &none         &kp DE_TILDE  &kp DE_EURO       &none  &none  &kp F12  &kp DE_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &none  &kp DE_CARET  &kp EQUAL     &backtick         &none  &none  &none    &kp DE_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
+  &none  &none         &none         &kp DE_BACKSLASH  &none                  &kp DE_PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                       &none         &none             &none                  &kp DE_DOT    &kp DE_COMMA  &none
             >;
         };
     };
