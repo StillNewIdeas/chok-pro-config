@@ -24,7 +24,7 @@
     /* flavor = "balanced"; */
 
     tapping-term-ms = <200>;
-    quick-tap-ms = <120>;
+    quick-tap-ms = <100>;
 };
 
 / {
