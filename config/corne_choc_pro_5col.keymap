@@ -23,7 +23,7 @@
 
     /* flavor = "balanced"; */
 
-    tapping-term-ms = <200>;
+    tapping-term-ms = <130>;
     quick-tap-ms = <100>;
 };
 
