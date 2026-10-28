@@ -164,7 +164,7 @@
             >;
         };
 
-        num {
+				num {
             display-name = "num";
 
             // --------------------------------------------------------------------------------------
@@ -181,8 +181,27 @@
             >;
         };
 
+
+
+        num_left {
+            display-name = "num_left";
+
+            // --------------------------------------------------------------------------------------
+            // | HUD | HUI | SAD | SAI | EFF | MUTE | PLAY | EFF | SAI | SAD | HUI | HUD |
+            // | PREV| VOLD| MUTE| VOLU| NEXT| ALT  | ALT  | PREV| VOLD| MUTE| VOLU| NEXT|
+            // | BRI | BRD | TOG |     |     |            |     |     | TOG | BRD | BRI |
+            //                       |     |     |     |         |     |     |     |
+
+            bindings = <
+  &kp F12  &kp F11  &kp F10          &kp F9               &trans  &trans  &trans  &trans      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+  &kp F8   &kp F7   &mt LEFT_GUI F6  &mt LEFT_CONTROL F5  &trans  &trans  &trans  &kp DE_DOT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_COMMA
+  &kp F4   &kp F3   &kp F2           &kp F1               &trans                  &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                    &none            &none                &none                   &mo 1       &none         &none
+            >;
+        };
+
         symbols_right {
-            display-name = "symbolsAndNav";
+            display-name = "symbols_right;
 
             // --------------------------------------------------------------------------------
             // |     |     |      |       |     |      |      |      |      |      |      |      |
