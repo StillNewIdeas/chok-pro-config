@@ -42,6 +42,13 @@
             bindings = <&kp LS(EQUAL) &kp LS(EQUAL)>;
             label = "FORWARDTICK";
         };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(DE_C)>;
+            label = "COPY";
+        };
     };
 
     behaviors {
@@ -107,6 +114,24 @@
 
             tapping-term-ms = <230>;
         };
+
+        layers_nums_base: layers_nums_base {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYERS_NUMS_BASE";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&mo 0>;
+
+            tapping-term-ms = <230>;
+        };
+
+        layers_symbols_base: layers_symbols_base {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYERS_SYMBOLS_BASE";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mo 0>;
+
+            tapping-term-ms = <230>;
+        };
     };
 
     keymap {
@@ -141,10 +166,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
-  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis  &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
-  &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                       &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
-                                               &kp BACKSPACE                  &kp LEFT_SHIFT             &mo 2                                          &none             &kp LEFT_SHIFT       &none
+  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace             &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
+  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis       &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
+  &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                            &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
+                                               &kp BACKSPACE                  &kp LEFT_SHIFT             &layers_nums_base                                   &none             &kp LEFT_SHIFT       &none
             >;
         };
 
@@ -158,10 +183,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &kp F12  &kp F11  &kp F10          &kp F9               &trans  &trans  &trans  &trans      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-  &kp F8   &kp F7   &mt LEFT_GUI F6  &mt LEFT_CONTROL F5  &trans  &trans  &trans  &kp DE_DOT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_COMMA
-  &kp F4   &kp F3   &kp F2           &kp F1               &trans                  &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                    &kp BACKSPACE    &trans               &trans                  &mo 1       &trans        &trans
+  &kp F12  &kp F11  &kp F10          &kp F9               &trans  &trans  &trans  &trans                &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+  &kp F8   &kp F7   &mt LEFT_GUI F6  &mt LEFT_CONTROL F5  &trans  &trans  &trans  &kp DE_DOT            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_COMMA
+  &kp F4   &kp F3   &kp F2           &kp F1               &trans                  &trans                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                    &kp BACKSPACE    &trans               &trans                  &layers_symbols_base  &trans        &trans
             >;
         };
     };
