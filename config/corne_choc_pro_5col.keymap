@@ -156,6 +156,24 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
+				symbols_right {
+            display-name = "symbolsAndNav";
+
+            // --------------------------------------------------------------------------------
+            // |     |     |      |       |     |      |      |      |      |      |      |      |
+            // | GUI | ALT | CTRL | SHIFT |     | ALT  | ALT  | CAPS | LEFT | DOWN |  UP  | RIGHT|
+            // |     |     |      |       |     |             | INS  | HOME | PGDN | PGUP | END  |
+            //                       |     |     |     |             |     |     |     |
+
+            bindings = <
+  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace             &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
+  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis       &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
+  &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                            &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
+                                               &kp BACKSPACE                  &kp LEFT_SHIFT             &layers_nums_base                                   &mo 1             &kp LEFT_SHIFT       &none
+            >;
+        };
+
+
         symbolsAndNav {
             display-name = "symbolsAndNav";
 
