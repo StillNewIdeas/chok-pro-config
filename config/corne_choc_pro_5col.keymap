@@ -95,6 +95,13 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
         };
+
+        logical_and_or: logical_and_or {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LOGICAL_AND_OR";
+            #binding-cells = <0>;
+            bindings = <&kp DE_AMPS>, <&kp DE_PIPE>;
+        };
     };
 
     keymap {
@@ -113,7 +120,7 @@
   &kp Q     &kp W       &kp F              &kp P               &kp B        &kp C_VOLUME_UP    &kp PAGE_UP    &kp J        &kp L               &kp U           &kp DE_Y    &umlaute_tap
   &kp A     &mt LALT R  &mt LEFT_GUI S     &mt LEFT_CONTROL T  &kp G        &kp C_VOLUME_DOWN  &kp PAGE_DOWN  &kp M        &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LALT I  &kp O
   &kp DE_Z  &kp X       &kp C              &kp D               &kp V                                          &kp K        &kp H               &kp DE_COMMA    &kp DE_DOT  &kp ESCAPE
-                        &backspace_delete  &kp LSHIFT          &lt 2 ENTER                                    &lt 1 SPACE  &kp LEFT_SHIFT      &kp DE_ESZETT
+                        &backspace_delete  &kp LEFT_SHIFT      &lt 2 ENTER                                    &lt 1 SPACE  &kp LEFT_SHIFT      &kp DE_ESZETT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -129,10 +136,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_PIPE       &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
-  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis  &none            &bt BT_CLR_ALL  &kp DE_AMPERSAND  &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
-  &kp DE_TILDE           &kp DE_ASTERISK       &kp DE_A                       &kp DE_EQUAL               &bracket                                       &walrus           &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
-                                               &none                          &kp LEFT_SHIFT             &mo 2                                          &none             &kp LSHFT            &none
+  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
+  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis  &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
+  &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                       &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
+                                               &none                          &kp LEFT_SHIFT             &mo 2                                          &none             &kp LEFT_SHIFT       &none
             >;
         };
 
