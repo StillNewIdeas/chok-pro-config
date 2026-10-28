@@ -44,6 +44,17 @@
         };
     };
 
+    behaviors {
+        umlaute_tap: umlaute_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UMLAUTE_TAP";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT>, <&kp DE_A_UMLAUT>, <&kp DE_O_UMLAUT>;
+
+            tapping-term-ms = <150>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -57,10 +68,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q     &kp W       &kp F           &kp P               &kp B             &kp C_VOLUME_UP    &kp PAGE_UP    &kp J             &kp L               &kp U           &kp DE_Y    &kp DE_ESZETT
-  &kp A     &mt LALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G             &kp C_VOLUME_DOWN  &kp PAGE_DOWN  &kp M             &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LALT I  &kp O
-  &kp DE_Z  &kp X       &kp C           &kp D               &kp V                                               &kp K             &kp H               &kp DE_COMMA    &kp DE_DOT  &kp ESCAPE
-                        &none           &mo 2               &mt LSHIFT ENTER                                    &mt LSHIFT SPACE  &mo 1               &none
+  &kp Q     &kp W       &kp F           &kp P               &kp B        &kp C_VOLUME_UP    &kp PAGE_UP    &kp J        &kp L               &kp U           &kp DE_Y    &umlaute_tap
+  &kp A     &mt LALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G        &kp C_VOLUME_DOWN  &kp PAGE_DOWN  &kp M        &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LALT I  &kp O
+  &kp DE_Z  &kp X       &kp C           &kp D               &kp V                                          &kp K        &kp H               &kp DE_COMMA    &kp DE_DOT  &kp ESCAPE
+                        &kp BACKSPACE   &kp LSHIFT          &lt 2 ENTER                                    &lt 1 SPACE  &kp LEFT_SHIFT      &kp DE_ESZETT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -76,10 +87,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &kp DELETE    &kp DE_PERCENT        &kp DE_HASH                    &kp DE_DOLLAR              &kp DE_LEFT_BRACE        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_PIPE       &kp DE_LESS_THAN     &kp TAB          &kp DE_GREATER_THAN  &kp BACKSPACE
+  &kp DE_CARET  &kp DE_PERCENT        &kp DE_HASH                    &kp DE_DOLLAR              &kp DE_LEFT_BRACE        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_PIPE       &kp DE_LESS_THAN     &kp TAB          &kp DE_GREATER_THAN  &kp DELETE
   &kp DE_AT     &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &kp DE_LEFT_PARENTHESIS  &none            &bt BT_CLR_ALL  &kp DE_AMPERSAND  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
   &kp DE_TILDE  &kp EQUAL             &backtick                      &kp DE_EQUAL               &kp DE_LEFT_BRACKET                                       &walrus           &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
-                                      &none                          &mo 2                      &kp LEFT_SHIFT                                            &none             &none                &none
+                                      &none                          &kp LSHIFT                 &mo 2                                                     &none             &none                &none
             >;
         };
 
@@ -93,10 +104,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &trans  &trans        &trans                &trans                         &kp DE_RIGHT_BRACE    &trans  &kp F12  &kp DE_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-  &trans  &kp DE_CARET  &mt LEFT_GUI DE_EURO  &mt LEFT_CONTROL DE_BACKSLASH  &trans                &trans  &trans   &kp DE_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
-  &trans  &trans        &trans                &kp DE_RIGHT_PARENTHESIS       &kp DE_RIGHT_BRACKET                   &kp DE_PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                        &trans                &trans                         &none                                  &kp DE_DOT    &kp DE_COMMA  &none
+  &trans  &trans  &trans                &trans                         &kp DE_RIGHT_BRACE    &trans  &kp F12  &kp DE_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+  &trans  &trans  &mt LEFT_GUI DE_EURO  &mt LEFT_CONTROL DE_BACKSLASH  &trans                &trans  &trans   &kp DE_MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
+  &trans  &trans  &trans                &kp DE_RIGHT_PARENTHESIS       &kp DE_RIGHT_BRACKET                   &kp DE_PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                  &trans                &trans                         &none                                  &kp DE_DOT    &kp DE_COMMA  &none
             >;
         };
     };
