@@ -115,20 +115,11 @@
             tapping-term-ms = <230>;
         };
 
-        layers_nums_base: layers_nums_base {
+        layer_nums_symbols_right: layer_nums_symbols_right {
             compatible = "zmk,behavior-tap-dance";
-            label = "LAYERS_NUMS_BASE";
+            label = "LAYER_NUMS_SYMBOLS_RIGHT";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 0>;
-
-            tapping-term-ms = <230>;
-        };
-
-        layers_symbols_base: layers_symbols_base {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYERS_SYMBOLS_BASE";
-            #binding-cells = <0>;
-            bindings = <&mo 3>, <&mo 0>;
+            bindings = <&mo 2>, <&mo 3>;
 
             tapping-term-ms = <230>;
         };
@@ -150,7 +141,7 @@
   &kp Q     &kp W       &kp F           &kp P               &kp B        &kp C_VOLUME_UP    &kp PAGE_UP    &kp J        &kp L               &kp U           &kp DE_Y    &umlaute_tap
   &kp A     &mt LALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G        &kp C_VOLUME_DOWN  &kp PAGE_DOWN  &kp M        &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LALT I  &kp O
   &kp DE_Z  &kp X       &kp C           &kp D               &kp V                                          &kp K        &kp H               &kp DE_COMMA    &kp DE_DOT  &kp ESCAPE
-                        &kp BACKSPACE   &kp LEFT_SHIFT      &lt 3 ENTER                                    &lt 1 SPACE  &kp LEFT_SHIFT      &kp DE_ESZETT
+                        &kp BACKSPACE   &kp LEFT_SHIFT      &lt 2 ENTER                                    &lt 1 SPACE  &kp LEFT_SHIFT      &kp DE_ESZETT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -166,10 +157,27 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace             &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
-  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis       &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
-  &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                            &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
-                                               &kp BACKSPACE                  &kp LEFT_SHIFT             &layers_nums_base                                   &mo 3             &mo 2                &none
+  &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace                     &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
+  &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis               &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
+  &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                                    &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
+                                               &kp BACKSPACE                  &kp LEFT_SHIFT             &layer_nums_symbols_right                                   &none             &none                &none
+            >;
+        };
+
+        num {
+            display-name = "num";
+
+            // --------------------------------------------------------------------------------------
+            // | HUD | HUI | SAD | SAI | EFF | MUTE | PLAY | EFF | SAI | SAD | HUI | HUD |
+            // | PREV| VOLD| MUTE| VOLU| NEXT| ALT  | ALT  | PREV| VOLD| MUTE| VOLU| NEXT|
+            // | BRI | BRD | TOG |     |     |            |     |     | TOG | BRD | BRI |
+            //                       |     |     |     |         |     |     |     |
+
+            bindings = <
+  &kp F12  &kp F11  &kp F10          &kp F9               &trans  &trans  &trans  &trans      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+  &kp F8   &kp F7   &mt LEFT_GUI F6  &mt LEFT_CONTROL F5  &trans  &trans  &trans  &kp DE_DOT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_COMMA
+  &kp F4   &kp F3   &kp F2           &kp F1               &trans                  &trans      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
+                    &none            &none                &none                   &mo 1       &none         &none
             >;
         };
 
@@ -186,33 +194,7 @@
   &backtick_forwardtick  &kp DE_PERCENT        &kp DE_HASH                    &dollar_euro               &brace        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_COLON      &kp DE_LESS_THAN     &kp TAB       &kp DE_GREATER_THAN  &kp DE_BACKSLASH
   &kp DE_AT              &mt LEFT_ALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &parenthesis  &none            &bt BT_CLR_ALL  &logical_and_or   &kp LEFT             &kp DOWN      &kp UP               &kp RIGHT
   &kp DE_TILDE           &kp DE_ASTERISK       &walrus                        &kp DE_EQUAL               &bracket                                       &kp DE_SEMICOLON  &kp DE_SINGLE_QUOTE  &kp DE_MINUS  &kp DE_SLASH         &kp DE_PLUS
-                                               &kp BACKSPACE                  &kp LEFT_SHIFT             &none                                          &none             &none                &none
-            >;
-        };
-
-        num {
-            display-name = "num";
-
-            // --------------------------------------------------------------------------------------
-            // | HUD | HUI | SAD | SAI | EFF | MUTE | PLAY | EFF | SAI | SAD | HUI | HUD |
-            // | PREV| VOLD| MUTE| VOLU| NEXT| ALT  | ALT  | PREV| VOLD| MUTE| VOLU| NEXT|
-            // | BRI | BRD | TOG |     |     |            |     |     | TOG | BRD | BRI |
-            //                       |     |     |     |         |     |     |     |
-
-            bindings = <
-  &kp F12  &kp F11  &kp F10          &kp F9               &trans  &trans  &trans  &trans                &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-  &kp F8   &kp F7   &mt LEFT_GUI F6  &mt LEFT_CONTROL F5  &trans  &trans  &trans  &kp DE_DOT            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_COMMA
-  &kp F4   &kp F3   &kp F2           &kp F1               &trans                  &trans                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                    &kp BACKSPACE    &trans               &mo 1                   &layers_symbols_base  &mo 4         &none
-            >;
-        };
-
-        nums_left {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans                  &trans  &trans  &trans
+                                               &none                          &none                      &none                                          &none             &none                &none
             >;
         };
     };
