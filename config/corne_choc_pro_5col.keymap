@@ -114,6 +114,15 @@
 
             tapping-term-ms = <170>;
         };
+
+        shift_sticky: shift_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <150>;
+            bindings = <&kp LSHFT>, <&sl 1>;
+        };
     };
 
     keymap {
