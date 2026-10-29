@@ -120,10 +120,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &walrus           &kp DE_PERCENT    &kp DE_HASH                    &dollar_euro               &kp DE_LEFT_BRACE        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_RIGHT_BRACE        &kp DE_LESS_THAN     &kp TAB          &kp DE_GREATER_THAN  &kp DE_BACKSLASH
-  &kp DE_AMPERSAND  &mt LALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &kp DE_LEFT_PARENTHESIS  &none            &bt BT_CLR_ALL  &kp DE_RIGHT_PARENTHESIS  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
-  &kp DE_PIPE       &kp DE_TILDE      &kp DE_AT                      &kp DE_EQUAL               &kp DE_LEFT_BRACKET                                       &kp DE_RIGHT_BRACKET      &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
-                                      &kp BACKSPACE                  &layer_shift LEFT_SHIFT 2  &kp ENTER                                                 &kp SPACE                 &to 0                &none
+  &backtick_forwardtick  &kp DE_PERCENT    &kp DE_HASH                    &walrus                    &kp DE_LEFT_BRACE        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_RIGHT_BRACE        &kp DE_LESS_THAN     &dollar_euro     &kp DE_GREATER_THAN  &kp DE_BACKSLASH
+  &kp DE_AMPERSAND       &mt LALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &kp DE_LEFT_PARENTHESIS  &none            &bt BT_CLR_ALL  &kp DE_RIGHT_PARENTHESIS  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
+  &kp DE_PIPE            &kp DE_TILDE      &kp DE_AT                      &kp DE_EQUAL               &kp DE_LEFT_BRACKET                                       &kp DE_RIGHT_BRACKET      &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
+                                           &to 0                          &layer_shift LEFT_SHIFT 2  &kp ENTER                                                 &kp SPACE                 &to 0                &none
             >;
         };
 
@@ -137,10 +137,10 @@
             //                       |     |     |     |         |     |     |     |
 
             bindings = <
-  &kp F12  &kp F11            &kp F10          &kp F9               &kp DE_RIGHT_BRACE        &trans  &trans  &kp DE_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &backtick_forwardtick
+  &kp F12  &kp F11            &kp F10          &kp F9               &kp DE_RIGHT_BRACE        &trans  &trans  &kp DE_ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp DE_PERCENT
   &kp F8   &mt LEFT_SHIFT F7  &mt LEFT_GUI F6  &mt LEFT_CONTROL F5  &kp DE_RIGHT_PARENTHESIS  &trans  &trans  &kp DE_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DE_SLASH
   &kp F4   &kp F3             &kp F2           &kp F1               &kp DE_RIGHT_BRACKET                      &kp DE_PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0
-                              &to 1            &to 0                &kp ENTER                                 &kp SPACE        &kp DE_DOT    &kp DE_COMMA
+                              &to 0            &to 1                &kp ENTER                                 &kp SPACE        &kp DE_DOT    &kp DE_COMMA
             >;
         };
     };
