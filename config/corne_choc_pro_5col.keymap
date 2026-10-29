@@ -70,15 +70,6 @@
             tapping-term-ms = <170>;
         };
 
-        layer_shift: shift_sticky {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&to>;
-        };
-
         eszet_capslock: eszet_capslock {
             compatible = "zmk,behavior-tap-dance";
             label = "ESZET_CAPSLOCK";
@@ -101,10 +92,10 @@
             //              | ESC/MEDIA | SPACE/NAV | TAB/FUN | RET/SYM | BSPC/NUM | DEL/ADJ |
 
             bindings = <
-  &kp Q     &kp W           &kp F           &kp P                      &kp B      &kp C_VOLUME_UP    &kp PAGE_UP    &kp J      &kp L                      &kp U           &kp DE_Y        &eszet_capslock
-  &kp A     &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T         &kp G      &kp C_VOLUME_DOWN  &kp PAGE_DOWN  &kp M      &mt LEFT_CONTROL N         &mt LEFT_GUI E  &mt LEFT_ALT I  &kp O
-  &kp DE_Z  &kp X           &kp C           &kp D                      &kp V                                        &kp K      &kp H                      &kp DE_COMMA    &kp DE_DOT      &kp ESCAPE
-                            &kp BACKSPACE   &layer_shift LEFT_SHIFT 2  &kp ENTER                                    &kp SPACE  &layer_shift LEFT_SHIFT 1  &kp TAB
+  &kp Q     &kp W           &kp F           &kp P               &kp B                 &kp C_VOLUME_UP    &kp PAGE_UP    &kp J                 &kp L               &kp U           &kp DE_Y        &eszet_capslock
+  &kp A     &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_CONTROL T  &kp G                 &kp C_VOLUME_DOWN  &kp PAGE_DOWN  &kp M                 &mt LEFT_CONTROL N  &mt LEFT_GUI E  &mt LEFT_ALT I  &kp O
+  &kp DE_Z  &kp X           &kp C           &kp D               &kp V                                                   &kp K                 &kp H               &kp DE_COMMA    &kp DE_DOT      &kp ESCAPE
+                            &kp BACKSPACE   &to 2               &mt LEFT_SHIFT ENTER                                    &mt LEFT_SHIFT SPACE  &to 1               &kp TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -120,10 +111,10 @@
             //                       |     |     |     |             |     |     |     |
 
             bindings = <
-  &backtick_forwardtick  &kp DE_PERCENT    &kp DE_HASH                    &walrus                    &kp DE_LEFT_BRACE        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_RIGHT_BRACE        &kp DE_LESS_THAN     &dollar_euro     &kp DE_GREATER_THAN  &kp DE_BACKSLASH
-  &kp DE_AMPERSAND       &mt LALT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &kp DE_LEFT_PARENTHESIS  &none            &bt BT_CLR_ALL  &kp DE_RIGHT_PARENTHESIS  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
-  &kp DE_PIPE            &kp DE_TILDE      &kp DE_AT                      &kp DE_EQUAL               &kp DE_LEFT_BRACKET                                       &kp DE_RIGHT_BRACKET      &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
-                                           &to 0                          &layer_shift LEFT_SHIFT 2  &kp ENTER                                                 &kp SPACE                 &to 0                &none
+  &backtick_forwardtick      &kp DE_PERCENT          &kp DE_HASH                    &walrus                    &kp DE_LEFT_BRACE        &rgb_ug RGB_TOG  &studio_unlock  &kp DE_RIGHT_BRACE        &kp DE_LESS_THAN     &dollar_euro     &kp DE_GREATER_THAN  &kp DE_BACKSLASH
+  &mt LEFT_ALT DE_AMPERSAND  &mt LEFT_SHIFT DE_EXCL  &mt LEFT_GUI DE_DOUBLE_QUOTES  &mt LEFT_CONTROL DE_UNDER  &kp DE_LEFT_PARENTHESIS  &none            &bt BT_CLR_ALL  &kp DE_RIGHT_PARENTHESIS  &kp LEFT             &kp DOWN         &kp UP               &kp RIGHT
+  &kp DE_PIPE                &kp DE_TILDE            &kp DE_AT                      &kp DE_EQUAL               &kp DE_LEFT_BRACKET                                       &kp DE_RIGHT_BRACKET      &kp DE_SINGLE_QUOTE  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT      &kp DE_O_UMLAUT
+                                                     &to 0                          &to 2                      &kp ENTER                                                 &kp SPACE                 &to 0                &none
             >;
         };
 
